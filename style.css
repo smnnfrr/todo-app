@@ -1,0 +1,149 @@
+/* Full-screen bubblegum pink canvas */
+body {
+    background-color: #ff9ebb; /* Vibrant pink */
+    font-family: 'Fredoka', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Perfectly centers the app vertically */
+    min-height: 100vh;
+    color: #333333;
+}
+
+/* Center alignment wrapper */
+.todo-app-wrapper {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+/* Playful handwritten title */
+.main-title {
+    font-family: 'Comic Neue', cursive;
+    font-size: 48px;
+    font-weight: 700;
+    color: #ff477e; /* Deep hot pink text */
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+/* Simple minimal welcome text */
+.welcome-text {
+    font-size: 16px;
+    color: #2b2b2b;
+    margin: 0 0 30px 0;
+}
+
+/* Horizontal alignment for input box and ADD button */
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Bold white pill-shaped input with a soft shadow */
+#todoInput {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 24px;
+    padding: 12px 25px;
+    border-radius: 16px;
+    width: 260px;
+    color: #333333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+#todoInput::placeholder {
+    color: #a3a3a3;
+}
+
+#todoInput:focus {
+    transform: scale(1.02);
+}
+
+/* ADD button with matching hot pink border */
+#addTodoButton {
+    background: none;
+    border: 2px solid #ff477e; /* Added the matching hot pink border */
+    outline: none;
+    font-family: 'Comic Neue', cursive;
+    font-size: 22px;
+    font-weight: 700;
+    color: #ff477e;
+    cursor: pointer;
+    padding: 8px 20px; /* Adjusted padding to look nice inside a border box */
+    border-radius: 12px; /* Smooth rounded corners for the border box */
+    transition: all 0.2s ease;
+}
+
+#addTodoButton:hover {
+    background-color: #ff477e; /* Inverts color layout on hover */
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+#addTodoButton:active {
+    transform: scale(0.95);
+}
+
+/* --- Styled Todo Items List Area --- */
+#todoList {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    max-width: 340px;
+}
+
+/* Individual rows */
+#todoList li {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    margin-bottom: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#todoList input[type="checkbox"] {
+    accent-color: #ff477e;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+#todoList span {
+    font-size: 18px;
+    color: #4a4a4a;
+    text-align: left;
+    padding: 0 10px;
+}
+
+#todoList button {
+    background-color: #ffccd5;
+    color: #ff477e;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#todoList button:hover {
+    background-color: #ff477e;
+    color: #ffffff;
+}
